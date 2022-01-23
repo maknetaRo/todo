@@ -17,7 +17,6 @@ const TodoList = ({
   console.log(mapNames);
   return (
     <div>
-      List of todos
       <ol>
         {todos.filter(mapNames[filter]).map((todo, index) => (
           <TodoItem

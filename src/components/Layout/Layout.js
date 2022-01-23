@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../Theme/GlobalStyles';
 import { lightTheme, darkTheme } from '../Theme/Theme';
-import { ToggleButton } from './atoms/ToggleButton';
-import { FiSun, FiMoon } from 'react-icons/fi';
 
 import Header from './sections/Header';
 import Main from './sections/Main';
@@ -28,14 +26,10 @@ const Layout = () => {
     }
   }, []);
 
-  const icon = theme !== 'light' ? <FiSun size={26} /> : <FiMoon size={26} />;
-  console.log(icon);
-
   return (
     <ThemeProvider theme={theme !== 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <ToggleButton onClick={toggleTheme}>{icon}</ToggleButton>
-      <Header />
+      <Header toggleTheme={toggleTheme} />
       <Main />
       <Footer />
     </ThemeProvider>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { StyledForm, StyledInput } from '../components/Layout/atoms/Form';
+import { Circle } from './Layout/atoms/CircleButton';
 
 const AddItemForm = ({ addTodo }) => {
   const initialState = { id: null, todo: '', completed: false };
@@ -17,14 +19,16 @@ const AddItemForm = ({ addTodo }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <StyledForm onSubmit={handleSubmit}>
+      <Circle />
+      <StyledInput
         type="text"
         name="todo"
         value={todo.todo}
         onChange={handleChange}
+        placeholder="Create a new todo..."
       />
-    </form>
+    </StyledForm>
   );
 };
 

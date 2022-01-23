@@ -91,17 +91,7 @@ const Main = () => {
   ));
 
   return (
-    <div className="App">
-      {isEditing ? (
-        <EditItemForm
-          currentTodo={currentTodo}
-          updateTodo={updateTodo}
-          setIsEditing={setIsEditing}
-        />
-      ) : (
-        <AddItemForm addTodo={addTodo} />
-      )}
-
+    <main>
       <TodoList
         todos={todos}
         removeTodo={removeTodo}
@@ -113,7 +103,7 @@ const Main = () => {
         mapNames={FILTER_MAP}
         filter={filter}
       />
-    </div>
+    </main>
   );
 };
 
