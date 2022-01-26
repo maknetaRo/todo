@@ -1,19 +1,28 @@
 import React from 'react';
+import { GroupElem, SecondElem, StyledListElem } from './Layout/atoms/ListElem';
+import { FiEdit2 } from 'react-icons/fi';
+import { Button, Circle } from './Layout/atoms/Buttons';
 
 const TodoItem = ({ index, todo, removeTodo, completeTodo, editTodo }) => {
   return (
-    <li>
-      <div
-        style={{ textDecoration: todo.completed ? 'line-through' : '' }}
-        onClick={() => completeTodo(index)}
-      >
-        {todo.todo}
-      </div>
-      <div>
-        <button onClick={() => removeTodo(todo.id)}>Delete</button>
-        <button onClick={() => editTodo(todo)}>Edit</button>
-      </div>
-    </li>
+    <StyledListElem>
+      <GroupElem>
+        <Circle />
+        <SecondElem
+          style={{ textDecoration: todo.completed ? 'line-through' : '' }}
+          onClick={() => completeTodo(index)}
+        >
+          {todo.todo}
+        </SecondElem>
+      </GroupElem>
+
+      <GroupElem>
+        <Button onClick={() => editTodo(todo)}>
+          <FiEdit2 size={20} />
+        </Button>
+        <Button onClick={() => removeTodo(todo.id)}>x</Button>
+      </GroupElem>
+    </StyledListElem>
   );
 };
 

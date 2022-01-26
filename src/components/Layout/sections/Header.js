@@ -1,5 +1,5 @@
 import React from 'react';
-import { ToggleButton } from '../atoms/ToggleButton';
+import { ToggleButton } from '../atoms/Buttons';
 import { StyledHeader, StyledHeaderRow, Heading } from '../atoms/StyledHeader';
 import EditItemForm from '../../EditItemForm';
 import AddItemForm from '../../AddItemForm';

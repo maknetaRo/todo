@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Circle } from './Layout/atoms/CircleButton';
+import { Circle } from './Layout/atoms/Buttons';
 import { StyledForm, StyledInput } from './Layout/atoms/Form';
 
 const EditItemForm = ({ currentTodo, setIsEditing, updateTodo }) => {

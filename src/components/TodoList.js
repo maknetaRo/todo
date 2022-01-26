@@ -1,5 +1,6 @@
 import React from 'react';
 import FilterBar from './FilterBar';
+import { StyledList } from './Layout/atoms/ListElem';
 import TodoItem from './TodoItem';
 
 const TodoList = ({
@@ -16,8 +17,8 @@ const TodoList = ({
   console.log(filter);
   console.log(mapNames);
   return (
-    <div>
-      <ol>
+    <>
+      <StyledList>
         {todos.filter(mapNames[filter]).map((todo, index) => (
           <TodoItem
             todo={todo}
@@ -28,13 +29,14 @@ const TodoList = ({
             editTodo={editTodo}
           />
         ))}
-      </ol>
+      </StyledList>
+
       <FilterBar
         pending={pending}
         clearCompleted={clearCompleted}
         filterList={filterList}
       />
-    </div>
+    </>
   );
 };
 

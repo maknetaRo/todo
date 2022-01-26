@@ -27,6 +27,11 @@ const Main = () => {
     { id: 4, todo: 'Read for 1 hour', completed: false },
     { id: 5, todo: 'Pick up groceries', completed: false },
     { id: 6, todo: 'Complete Todo App on Frontend Mentor', completed: false },
+    {
+      id: 7,
+      todo: 'Try to use React Memo to change icon colors on light and dark mode',
+      completed: false,
+    },
   ];
 
   const [todos, setTodos] = useState(initialState);
@@ -92,17 +97,19 @@ const Main = () => {
 
   return (
     <main>
-      <TodoList
-        todos={todos}
-        removeTodo={removeTodo}
-        completeTodo={completeTodo}
-        editTodo={editTodo}
-        pending={pending}
-        clearCompleted={clearCompleted}
-        filterList={filterList}
-        mapNames={FILTER_MAP}
-        filter={filter}
-      />
+      {todos.length > 0 && (
+        <TodoList
+          todos={todos}
+          removeTodo={removeTodo}
+          completeTodo={completeTodo}
+          editTodo={editTodo}
+          pending={pending}
+          clearCompleted={clearCompleted}
+          filterList={filterList}
+          mapNames={FILTER_MAP}
+          filter={filter}
+        />
+      )}
     </main>
   );
 };

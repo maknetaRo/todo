@@ -1,14 +1,15 @@
 import React from 'react';
+import { StyledFilterBtn } from './Layout/atoms/Buttons';
 
 const FilterButton = ({ name, isPressed, setFilter }) => {
   return (
-    <button
+    <StyledFilterBtn
       type="button"
       aria-pressed={isPressed}
       onClick={() => setFilter(name)}
     >
       {name}
-    </button>
+    </StyledFilterBtn>
   );
 };
 
