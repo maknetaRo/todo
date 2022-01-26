@@ -20,4 +20,5 @@ export const StyledFilterBar = styled.div`
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   line-height: 2.5;
+  box-shadow: 1px 3px 3px rgba(119, 122, 146, 0.3);
 `;
