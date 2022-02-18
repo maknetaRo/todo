@@ -1,9 +1,9 @@
-import bgDesktopDark from '../../images/bg-desktop-dark.jpg';
-import bgDesktopLight from '../../images/bg-desktop-light.jpg';
-import bgMobileDark from '../../images/bg-mobile-dark.jpg';
-import bgMobileLight from '../../images/bg-mobile-light.jpg';
-import iconSun from '../../images/icon-sun.svg';
-import iconMoon from '../../images/icon-moon.svg';
+import bgDesktopDark from '../images/bg-desktop-dark.jpg';
+import bgDesktopLight from '../images/bg-desktop-light.jpg';
+import bgMobileDark from '../images/bg-mobile-dark.jpg';
+import bgMobileLight from '../images/bg-mobile-light.jpg';
+import iconSun from '../images/icon-sun.svg';
+import iconMoon from '../images/icon-moon.svg';
 
 export const lightTheme = {
   bodyBg: 'white',

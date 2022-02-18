@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { StyledForm, StyledInput } from '../components/Layout/atoms/Form';
-import { Circle } from './Layout/atoms/Buttons';
+import { StyledForm, StyledInput } from './styles';
+import { Circle } from '../Button';
 
 const AddItemForm = ({ addTodo }) => {
   const initialState = { id: null, todo: '', completed: false };

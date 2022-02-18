@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from '../Theme/GlobalStyles';
-import { lightTheme, darkTheme } from '../Theme/Theme';
+import { lightTheme, darkTheme } from '../../Theme/Theme';
+import { GlobalStyles } from '../../Theme/GlobalStyles';
 
-import Header from './sections/Header';
-import Main from './sections/Main';
-import Footer from './sections/Footer';
+import Header from '../Header';
+import Main from '../Main';
+import Footer from '../Footer.js';
 
 const Layout = () => {
   const [theme, setTheme] = useState(true);

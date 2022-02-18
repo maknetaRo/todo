@@ -1,8 +1,8 @@
 import React from 'react';
-import { ToggleButton } from '../atoms/Buttons';
-import { StyledHeader, StyledHeaderRow, Heading } from '../atoms/StyledHeader';
-import EditItemForm from '../../EditItemForm';
-import AddItemForm from '../../AddItemForm';
+import { ToggleButton } from '../Button';
+import { StyledHeader, StyledHeaderRow, Heading } from './styles';
+import EditItemForm from '../Form/EditItemForm';
+import AddItemForm from '../Form/AddItemForm';
 
 const Header = ({
   toggleTheme,

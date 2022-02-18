@@ -22,3 +22,16 @@ export const StyledFilterBar = styled.div`
   line-height: 2.5;
   box-shadow: 1px 3px 3px rgba(119, 122, 146, 0.3);
 `;
+
+export const StyledList = styled.ul`
+  max-width: 580px;
+  width: 100%;
+  margin: -3.5rem auto 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 1px 3px 3px rgba(119, 122, 146, 0.3);
+  padding: 0.25rem;
+  padding-bottom: 0;
+  background-color: ${(props) => props.theme.todosBg};
+  transition: all ${(props) => props.theme.transitionTime};
+`;

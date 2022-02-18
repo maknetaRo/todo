@@ -1,7 +1,7 @@
 import React from 'react';
-import FilterBar from './FilterBar';
-import { StyledList } from './Layout/atoms/ListElem';
+import FilterBar from '../FilterBar/FilterBar';
 import TodoItem from './TodoItem';
+import { StyledList } from '../FilterBar/styles';
 
 const TodoList = ({
   todos,

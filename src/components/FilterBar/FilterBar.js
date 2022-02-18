@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledFilterBar } from './Layout/atoms/StyledFilterBar';
-import { StyledFilterBtn } from './Layout/atoms/Buttons';
+import { StyledFilterBar } from './styles';
+import { StyledFilterBtn } from '../Button';
 
 const FilterBar = ({ pending, clearCompleted, filterList }) => {
   return (

@@ -10,6 +10,7 @@ export const StyledForm = styled.form`
   padding: 0.75rem;
   border-radius: 5px;
   transition: all ${(props) => props.theme.transitionTime};
+  box-shadow: 1px 3px 3px rgba(119, 122, 146, 0.3);
 `;
 
 export const StyledInput = styled.input`

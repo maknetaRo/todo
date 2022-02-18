@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import TodoList from '../../TodoList';
-import AddItemForm from '../../AddItemForm';
-import EditItemForm from '../../EditItemForm';
-import FilterButton from '../../FilterBar';
+import TodoList from '../List/TodoList';
+import FilterButton from '../FilterBar/FilterButton';
 
 const FILTER_MAP = {
   All: () => true,

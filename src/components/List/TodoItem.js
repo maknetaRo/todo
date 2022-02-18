@@ -1,7 +1,7 @@
 import React from 'react';
-import { GroupElem, SecondElem, StyledListElem } from './Layout/atoms/ListElem';
+import { GroupElem, SecondElem, StyledListElem } from './styles';
 import { FiEdit2 } from 'react-icons/fi';
-import { Button, Circle } from './Layout/atoms/Buttons';
+import { Button, Circle } from '../Button';
 
 const TodoItem = ({ index, todo, removeTodo, completeTodo, editTodo }) => {
   return (

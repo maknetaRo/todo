@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledFilterBtn } from './Layout/atoms/Buttons';
+import { StyledFilterBtn } from '../Button';
 
 const FilterButton = ({ name, isPressed, setFilter }) => {
   return (
