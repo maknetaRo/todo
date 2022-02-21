@@ -1,42 +1,23 @@
 import React from 'react';
-import FilterBar from '../FilterBar/FilterBar';
 import TodoItem from './TodoItem';
 import { StyledList } from '../FilterBar/styles';
+import { useTodoContext } from '../../contexts/TodoContextProvider';
 
-const TodoList = ({
-  todos,
-  removeTodo,
-  completeTodo,
-  editTodo,
-  pending,
-  clearCompleted,
-  filterList,
-  mapNames,
-  filter,
-}) => {
-  console.log(filter);
-  console.log(mapNames);
+const TodoList = () => {
+  const { todos, FILTER_MAP, filterName } = useTodoContext();
+  console.log(FILTER_MAP);
+  console.log(FILTER_MAP[filterName]);
   return (
-    <>
+    <main>
       <StyledList>
-        {todos.filter(mapNames[filter]).map((todo, index) => (
-          <TodoItem
-            todo={todo}
-            index={index}
-            key={index}
-            removeTodo={removeTodo}
-            completeTodo={completeTodo}
-            editTodo={editTodo}
-          />
-        ))}
+        {todos &&
+          todos
+            .filter(FILTER_MAP[filterName])
+            .map((todo, index) => (
+              <TodoItem key={index} todo={todo} index={index} />
+            ))}
       </StyledList>
-
-      <FilterBar
-        pending={pending}
-        clearCompleted={clearCompleted}
-        filterList={filterList}
-      />
-    </>
+    </main>
   );
 };
 

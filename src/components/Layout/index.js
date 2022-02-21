@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../../Theme/Theme';
 import { GlobalStyles } from '../../Theme/GlobalStyles';
-
 import Header from '../Header';
-import Main from '../Main';
 import Footer from '../Footer.js';
+import { TodosContextProvider } from '../../contexts/TodoContextProvider';
+import TodoList from '../List/TodoList';
+import FilterBar from '../FilterBar/FilterBar';
 
 const Layout = () => {
   const [theme, setTheme] = useState(true);
@@ -29,8 +30,12 @@ const Layout = () => {
   return (
     <ThemeProvider theme={theme !== 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <Header toggleTheme={toggleTheme} />
-      <Main />
+      <TodosContextProvider>
+        <Header toggleTheme={toggleTheme} />
+        <TodoList />
+        <FilterBar />
+      </TodosContextProvider>
+
       <Footer />
     </ThemeProvider>
   );

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { StyledForm, StyledInput } from './styles';
 import { Circle } from '../Button';
+import { useTodoContext } from '../../contexts/TodoContextProvider';
 
-const AddItemForm = ({ addTodo }) => {
+const AddItemForm = () => {
+  const { addTodo } = useTodoContext();
   const initialState = { id: null, todo: '', completed: false };
   const [todo, setTodo] = useState(initialState);
 

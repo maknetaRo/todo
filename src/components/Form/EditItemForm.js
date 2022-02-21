@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useTodoContext } from '../../contexts/TodoContextProvider';
 import { Circle } from '../Button';
 import { StyledForm, StyledInput } from './styles';
 
-const EditItemForm = ({ currentTodo, setIsEditing, updateTodo }) => {
+const EditItemForm = () => {
+  const { currentTodo, setIsEditing, updateTodo } = useTodoContext();
   const [todo, setTodo] = useState(currentTodo);
 
   useEffect(() => {
