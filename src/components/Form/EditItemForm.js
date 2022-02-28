@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useTodoContext } from '../../contexts/TodoContextProvider';
+import { Circle } from '../Button';
+import { StyledForm, StyledInput } from './styles';
 
-const EditItemForm = ({ currentTodo, setIsEditing, updateTodo }) => {
+const EditItemForm = () => {
+  const { currentTodo, setIsEditing, updateTodo } = useTodoContext();
   const [todo, setTodo] = useState(currentTodo);
 
   useEffect(() => {
@@ -18,8 +22,9 @@ const EditItemForm = ({ currentTodo, setIsEditing, updateTodo }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <StyledForm onSubmit={handleSubmit}>
+      <Circle />
+      <StyledInput
         type="text"
         name="todo"
         value={todo.todo}
@@ -27,7 +32,7 @@ const EditItemForm = ({ currentTodo, setIsEditing, updateTodo }) => {
       />
       <button>Update</button>
       <button onClick={() => setIsEditing(false)}>Cancel</button>
-    </form>
+    </StyledForm>
   );
 };
 
