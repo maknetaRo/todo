@@ -11,11 +11,13 @@ export const lightTheme = {
   headings: 'black',
   inputText: 'hsl(233, 14%, 35%)',
   text: 'hsl(233, 14%, 35%)',
+  textCompleted: 'hsl(0, 0%, 98%)',
   transitionTime: '.25s',
   bgDesktop: bgDesktopLight,
   bgMobile: bgMobileLight,
   icon: iconMoon,
   fill: 'hsl(233, 14%, 35%)',
+  
 };
 
 export const darkTheme = {
@@ -24,6 +26,7 @@ export const darkTheme = {
   headings: 'white',
   inputText: 'white',
   text: 'white',
+  textCompleted: 'hsl(0, 0%, 98%)',
   transitionTime: '.25s',
   bgDesktop: bgDesktopDark,
   bgMobile: bgMobileDark,
